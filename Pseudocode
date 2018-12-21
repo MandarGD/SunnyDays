@@ -1,0 +1,98 @@
+Pseudocode for: 
+
+Main page:
+Graphical display of Sunny Dayz logo
+using Jbutton , user can choose (by clicking) which feature they would like to use
+
+Notepad:
+(this pseudocode does not include what you need to import)
+Create a public class Notepad
+Create :
+JFrame frame
+JMenuBar menuBar
+JMenu file
+JMenuItem open, save, exit
+JFileChooser fileChooser
+JTextArea textArea
+Create method NotePad()
+Create new JFrame Notepad Application
+Create new JMenu file
+Create new JMenuItem open
+Create new JMenuItem save
+Crea new JMenuItem exit
+Create new JTextArea
+Create new JFileChooser
+Create new JMenuBar
+Set the default close operation as Jframe Exit on Close
+Add text area to frame
+Add open, save and exit in file
+Create listeners for open, save and exit
+Set frame size as 800 by 600
+Create a class savelistener that implements actionlistener
+Create a public void called actionPerformed with ActionEvent e listener
+
+Sketchpad (use I/O to save drawing):
+(this pseudocode does not include what you need to import)
+Create a JPanel
+Instantiate an object as drawingcanvas
+Create a class called TestDrawingCanvas
+Create a canvas using jPanel
+Create a class called ClearAction that extends AbstractAction
+Create method called ClearAction
+Use super() method to clear canvas
+Create a public void called actionPerformed with ActionEvent e listener
+Use clear() method
+Create private static void createAndShowGui
+Create JFrame frame
+Use invokeLater() method
+Create a JPanel called DrawingCanvas
+Set width as 800 and height as 600
+Set colour as black and stroke as 10
+Create DrawingCanvas() method
+Set background colour as white
+Instantiate object myMouse
+Add mouse listener
+
+
+Timer: 
+Create a JFrame
+Add labels for the time in hours, minutes and seconds (eg. 00:00:00)
+Initialize a start button, stop button and reset button (using Jbutton)
+Declare boolean value true to variable state
+Declare integer variable for seconds, minutes and hours (eg. int minutes = 0;)
+In actions performed, for the Jbuttons, put state to false so timer will stop
+Create a method called run
+Create an if statement to keep track of time and control when it’ll stop
+Use SetText to show change in time
+
+Clock:  
+Create a JFrame
+Add labels for the time in hours, minutes and seconds (eg. 00:00:00)
+Declare boolean value true to variable state
+Declare integer variable for seconds, minutes and hours
+Create a method called start
+Create an if statement to keep track of time 
+Use SetText to show change in time
+
+
+
+Calendar: 
+
+If button is pressed
+	Clear screen/open new frame
+	Read date and time from computer
+	If (month (#) % 2 != 0)
+		Make a grid with 31 days (5x7) 
+		Mark 31 squares with numbers (dates)
+	Else If (month(#) % 2 == 0)
+		Make grid with 30 days (5x7)
+		Mark 30 days
+	Else
+		Make grid with 28 days(5x6)
+		Mark 28 days
+If date is clicked, open up a text box
+	When enter is hit again
+	Write string inside the box (coordinates)
+
+Then use file io to keep data
+Maybe ‘clear’ button to clear all data entered
