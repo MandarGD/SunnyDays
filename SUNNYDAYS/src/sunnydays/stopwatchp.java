@@ -11,15 +11,29 @@ package sunnydays;
  */
 import javax.swing.Timer;
 import java.awt.event.*;
+import javax.swing.JFrame;
 public class stopwatchp extends javax.swing.JPanel {
 
     /**
      * Creates new form stopwatchp
      */
     public stopwatchp() {
+        
         initComponents();
     }
 
+    
+    public static void createAndShowGui() {
+        stopwatchp mainPanel = new stopwatchp();
+
+        JFrame frame = new JFrame("Stopwatch");
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.getContentPane().add(mainPanel);
+        frame.pack();
+        frame.setLocationByPlatform(true);
+        frame.setVisible(true);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -62,7 +76,7 @@ public class stopwatchp extends javax.swing.JPanel {
         jLabel7.setText("Second");
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton1.setText("Start");
+        jButton1.setText("Reset");
         jButton1.setToolTipText("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,7 +93,8 @@ public class stopwatchp extends javax.swing.JPanel {
         });
 
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton3.setText("Reset");
+        jButton3.setText("Start");
+        jButton3.setToolTipText("");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -152,7 +167,8 @@ public class stopwatchp extends javax.swing.JPanel {
     int h=0;
     Timer T=new Timer(1000, new ActionListener()
    
-    {public void actionPerformed (ActionEvent e)
+    {@Override
+    public void actionPerformed (ActionEvent e)
     {
         s++;
         jLabel4.setText (""+s);

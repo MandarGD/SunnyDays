@@ -50,7 +50,7 @@ public class Drawpad extends javax.swing.JPanel {
         }
     }
 
-    private static void createAndShowGui() {
+    public static void createAndShowGui() {
         Drawpad mainPanel = new Drawpad();
 
         JFrame frame = new JFrame("Drawing Canvas");

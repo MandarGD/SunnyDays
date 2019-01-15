@@ -20,7 +20,7 @@ public class Notes extends javax.swing.JPanel {
     /**
      * Creates new form Notes
      */
-public class Note {
+
 	JFrame frame;
 	JMenuBar menuBar;
 	JMenu file;
@@ -28,7 +28,7 @@ public class Note {
 	JFileChooser fileChooser;
 	JTextArea textArea;
 	
-	Note() {
+	Notes() {
 		frame = new JFrame("Notes");
 		file = new JMenu("File");
 		open = new JMenuItem("Open");
@@ -39,7 +39,7 @@ public class Note {
 		menuBar = new JMenuBar();
 		
 		frame.setLayout(new BorderLayout());
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		frame.add(textArea);
 		file.add(open);
@@ -106,10 +106,8 @@ public class Note {
 		}
 	}
 	
-	public void main(String args[]) {
-		Note n = new Note();
-	}
-}
+	
+
 
 
     /**

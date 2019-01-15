@@ -7,6 +7,7 @@ package sunnydays;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.text.DateFormat;
+import javax.swing.JFrame;
 /**
  *
  * @author S338554033
@@ -20,16 +21,29 @@ public class clockp extends javax.swing.JPanel {
     public clockp() {
         initComponents();
                 new Thread(){
+            @Override
             public void run(){
                 while (timeRun==0){
                    Date t = new Date();
                    SimpleDateFormat adf = new SimpleDateFormat("hh:mm:ss aa");
                    jLabel1.setText (adf.format (t));
+                   
                 }
             }
         }.start();
     }
 
+    public static void createAndShowGui() {
+        clockp mainPanel = new clockp();
+
+        JFrame frame = new JFrame("Drawing Canvas");
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.getContentPane().add(mainPanel);
+        frame.pack();
+        frame.setLocationByPlatform(true);
+        frame.setVisible(true);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
