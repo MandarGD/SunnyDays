@@ -31,7 +31,7 @@ public class Calendarp extends javax.swing.JFrame{
   DefaultTableModel model;
   Calendar cal = new GregorianCalendar();
   JLabel label;
- 
+  //constructor to create properties for GUI
    Calendarp() {
  
     this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -47,6 +47,7 @@ public class Calendarp extends javax.swing.JFrame{
     JButton b1 = new JButton("<-");
     b1.addActionListener(new ActionListener() {
       @Override
+      //scroll left
       public void actionPerformed(ActionEvent ae) {
         cal.add(Calendar.MONTH, -1);
         updateMonth();
@@ -56,12 +57,13 @@ public class Calendarp extends javax.swing.JFrame{
     JButton b2 = new JButton("->");
     b2.addActionListener(new ActionListener() {
       @Override
+      //scroll right
       public void actionPerformed(ActionEvent ae) {
         cal.add(Calendar.MONTH, +1);
         updateMonth();
       }
     });
- 
+    
     JPanel panel = new JPanel();
     panel.setLayout(new BorderLayout());
     panel.add(b1,BorderLayout.WEST);
@@ -80,7 +82,7 @@ public class Calendarp extends javax.swing.JFrame{
     this.updateMonth();
  
   }
- 
+ //updates month through computer date
   void updateMonth() {
     cal.set(Calendar.DAY_OF_MONTH, 1);
  

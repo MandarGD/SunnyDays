@@ -30,6 +30,7 @@ public class Drawpad extends javax.swing.JPanel {
      * Creates new form Draw
      */
     public Drawpad() {
+        //new jpanel creation
         JPanel btnPanel = new JPanel(new FlowLayout(FlowLayout.TRAILING));
         btnPanel.add(new JButton(new ClearAction()));
 
@@ -38,6 +39,7 @@ public class Drawpad extends javax.swing.JPanel {
         add(btnPanel, BorderLayout.PAGE_END);
     }
 
+        //to clear drawing canvas
     private class ClearAction extends AbstractAction {
         public ClearAction() {
             super("Clear Canvas");
@@ -50,6 +52,7 @@ public class Drawpad extends javax.swing.JPanel {
         }
     }
 
+       //create the frame
     public static void createAndShowGui() {
         Drawpad mainPanel = new Drawpad();
 
@@ -62,7 +65,7 @@ public class Drawpad extends javax.swing.JPanel {
     }
 
    
-
+    //properties
 class DrawingCanvas extends JPanel {
     private static final int PREF_W = 800;
     private static final int PREF_H = 600;

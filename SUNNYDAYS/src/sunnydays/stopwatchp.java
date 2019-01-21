@@ -22,7 +22,7 @@ public class stopwatchp extends javax.swing.JPanel {
         initComponents();
     }
 
-    
+    //create GUI frame
     public static void createAndShowGui() {
         stopwatchp mainPanel = new stopwatchp();
 
@@ -167,6 +167,7 @@ public class stopwatchp extends javax.swing.JPanel {
     int h=0;
     Timer T=new Timer(1000, new ActionListener()
    
+            //stopwatch look
     {@Override
     public void actionPerformed (ActionEvent e)
     {
@@ -189,14 +190,17 @@ public class stopwatchp extends javax.swing.JPanel {
     }
     
     });
+    
+    //start button
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        T.start();
     }//GEN-LAST:event_jButton3ActionPerformed
-
+    //stop button
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
          T.stop();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    //reset button
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          jLabel4.setText (""+0);
        jLabel2.setText(0+ " : ");

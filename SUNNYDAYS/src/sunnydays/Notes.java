@@ -27,7 +27,8 @@ public class Notes extends javax.swing.JPanel {
 	JMenuItem open, save, exit;
 	JFileChooser fileChooser;
 	JTextArea textArea;
-	
+        
+	//constructor creating GUI
 	Notes() {
 		frame = new JFrame("Notes");
 		file = new JMenu("File");
@@ -58,7 +59,7 @@ public class Notes extends javax.swing.JPanel {
 		frame.setSize(800, 600);
 		frame.setVisible(true);
 	}
-	
+	//when keys are pressed
 	class OpenListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			if (JFileChooser.APPROVE_OPTION == fileChooser.showOpenDialog(frame)) {
@@ -79,7 +80,7 @@ public class Notes extends javax.swing.JPanel {
 			}
 		}
 	}
-	
+	//saves the file
 	class SaveListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			if (JFileChooser.APPROVE_OPTION == fileChooser.showSaveDialog(frame)) {
@@ -99,7 +100,7 @@ public class Notes extends javax.swing.JPanel {
 			}
 		}
 	}
-	
+	//exit
 	class ExitListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			System.exit(0);

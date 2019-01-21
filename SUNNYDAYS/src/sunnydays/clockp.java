@@ -33,6 +33,7 @@ public class clockp extends javax.swing.JPanel {
         }.start();
     }
 
+    //create GUI
     public static void createAndShowGui() {
         clockp mainPanel = new clockp();
 
